@@ -63,7 +63,7 @@ namespace MICROSERVICES.Common.Jaeger.Jaeger
             using (var serviceProvider = services.BuildServiceProvider())
             {
                 var configuration = serviceProvider.GetService<IConfiguration>();
-                return configuration.GetOptions<JaegerOptions>("jaeger");
+                return configuration.GetOptions<JaegerOptions>(JaegerSectionName);
             }
         }
 
